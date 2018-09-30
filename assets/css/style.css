@@ -1,0 +1,691 @@
+/*
+ * Mare Lovely & Elegant Wedding Invitation Landing Page HTML
+ * Version : 1.0.0
+
+ STYLE INDEX
+ * 1. GENERAL STYLE
+ * 2. HEADER
+     2.1 Header Video Background
+     2.2 Header Slideshow  
+ * 3. MAIN MENU
+ * 4. COUPLES
+ * 5. COUNTDOWN
+ * 6. LOVE STORY
+ * 7. GALLERY
+ * 8. PARTY
+ * 9. RSVP
+ * 10. FOOTER
+ * 11. MAP
+ * 12. MEDIA QUERY
+ */
+
+html
+{
+    position:relative;
+    height:100%;
+}
+body{
+    font-family:"Lato", sans-serif;
+    height:100%;
+}
+.section{
+    padding:2.5em 0;
+}
+a:hover, a:focus{
+    text-decoration:none;
+}
+.no-resize{ 
+    resize: none;
+}
+
+/* ===== 1. GENERAL STYLE ===== */
+.background-fixed{
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center center;
+    position:relative;
+    z-index:-1;
+}
+.head{
+    font-family: "Great Vibes", cursive;
+    text-align:center;
+    color:#ea545d;
+    font-size:3.5em;
+}
+.heading h1{
+    font-family: "Great Vibes", cursive;
+    text-align:center;
+    color:#ea545d;
+    font-size:3.5em;
+}
+.btn-outline{
+     color:#ea545d;
+    border:1px solid #ea545d;
+    border-radius:30px;
+    padding:10px;
+    min-width:180px;
+    background:transparent; 
+}
+
+.btn-outline:hover{
+    color:#FFFFFF;
+    background-color:#ea545d;
+}
+.background-pattern::before, .background-pattern::after{
+    content:'';
+    padding:10px 0;
+    display:block;
+    background-image:url("../images/pattern.png");
+    background-repeat:repeat-x;
+}
+.background-pattern::before{
+    background-position:top left;
+}
+.background-pattern::after{
+    background-position:bottom left;
+}
+
+.background-pattern > div{
+   background:url("../images/cork-wallet.png") repeat center center;
+}
+
+
+/* ===== 2. HEADER ===== */
+header.hero{
+    height: -webkit-calc(100% - 50px);
+    height: -moz-calc(100% - 50px);
+    height: calc(100% - 50px);
+    display:table;
+    position:relative;
+    width:100%;
+    background-image:url('../images/hero-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    z-index: 6;
+}
+
+header.hero::before{
+    content:' ';
+    position:absolute;
+    z-index:6;
+    background-color:rgba(0,0,0,0.35);
+    width:100%;
+    height:100%;
+}
+
+header.hero > .hero-wrapper
+{
+    display: table-cell;
+    vertical-align: middle;
+    position:relative;
+    overflow: hidden;
+}
+
+header.hero > .hero-wrapper > .hero-text
+{
+    background-image:url("../images/heart-shape-hero.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center center;
+    width:300px;
+    height:296px;
+    text-align: center;
+    margin:0 auto;
+    box-sizing: border-box;
+    padding:35px;
+    color:#FFFFFF;
+    position: relative;
+    z-index: 8;
+}
+
+header.hero > .hero-wrapper > .hero-text > h1 > *
+{
+    font-family: "Great Vibes", cursive;
+    display:block;
+    font-size:1.25em;
+}
+/* 2.1 Header Video Background */
+header.hero.video-background{
+    background-image:none;
+}
+
+header.hero.video-background .hero-wrapper .ytplayer-container{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+/*  2.2 Header Slideshow */
+header.slideshow {
+    background-image:none;
+}
+
+
+header.slideshow .hero-wrapper .bx-wrapper{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100% !important;
+}
+header.slideshow .hero-wrapper .bx-viewport
+{
+	border:none;
+	left:0;
+	box-shadow:none;
+	-webkit-box-shadow:none;
+    height:100%;
+    top:0;
+    position:absolute;
+}
+
+header.slideshow .bx-viewport #slides
+{
+    height:100% !important;
+}
+
+header.slideshow .bx-viewport #slides > .item
+{
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	width:100%;
+    height:100% !important;
+}
+
+/* ===== 3. MAIN MENU ===== */
+.navbar.navmenu
+{
+	border-radius:0;
+	margin-bottom:0;
+	background-color:#F2f2f2;
+	border:none;
+    z-index:9 !important;
+    border-bottom:1px solid #b5b5b5;
+	transition:all 0.3s ease-out;
+	-webkit-transition:all 0.3s ease-out;
+}
+
+.navbar.navmenu .navbar-brand
+{
+	font-family: "Great Vibes", cursive;
+	color:#ea545d;
+    font-size:1.5em;
+}
+.navbar.navmenu .navbar-brand span{
+    display:block;
+}
+
+.navmenu ul.nav
+{
+	float:none;
+	text-align:center;
+}
+.navmenu ul.nav li{
+	float:none;
+	display:inline-block;
+	padding-top:10px;
+	padding-bottom:10px;
+	margin-left:10px;
+	margin-right:10px;
+}
+.navmenu ul.nav li > a
+{
+	padding-top:3px;
+	padding-bottom:3px;
+	border-radius:3px;
+	color:#000000;
+    text-transform: uppercase;
+}
+.navbar .navbar-toggle{
+    margin:0;
+    color:#FFFFFF; 
+    border-radius:0;
+    display:block;
+    height:50px;
+    width:50px;
+    border:transparent;
+    background-color:#ea545d;
+}
+.navbar .navbar-toggle:hover, .navbar .navbar-toggle:focus{
+    background-color:#c22b34;
+}
+.navmenu ul.nav li.active > a, 
+.navmenu ul.nav li.active > a:hover,
+.navmenu ul.nav li.active > a:focus
+{
+	color:#ea545d;
+	background-color:transparent;
+    border:1px solid #ea545d;   
+}
+.navmenu ul.nav li > a:hover
+{
+	color:#FFF;
+	background-color:#ea545d;
+}
+.is-sticky .navbar
+{
+	box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.5);
+}
+
+
+/* ===== 4. COUPLES ===== */
+#couples.section{
+    margin-top:0;
+}
+#couples .information{
+    text-align:center;
+    width:100%;
+    margin:0 auto;
+}
+#couples .information p{
+    font-size:1em;
+}
+#couples .information .heading
+{
+    display:table;
+    vertical-align: middle;
+    width:100%;
+}
+#couples .information .heading > *{
+    display:table-cell;
+    width:50%;
+    padding:15px;
+}
+#couples .information .heading > h1
+{
+    font-size:4.5em; 
+}
+
+#couples .information .heading > h1 span{
+    display:block;
+    margin-left:1em;
+}
+
+#couples .information .heading > h1 span:last-child{
+    margin-left:2.2em;
+}
+
+#couples .information .heading > h3
+{
+    text-align:left;
+    color:#2d2d2d;
+}
+#couples .information .heading > h3 span{
+    display:block;
+}
+#couples .person-wrapper
+{
+    margin-top:2em;
+    display:table;
+    width:100%;
+    
+}
+#couples .person-wrapper > div
+{
+    display:table-cell;
+    width:calc(100%/2);
+    width:50%;
+    padding:5px;
+}
+#couples  .person-wrapper .person{
+    max-width:220px;
+    width:100%;
+    height:220px;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    overflow:hidden;
+    position:relative;
+    padding:10px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:top left;
+}
+
+#couples .person-wrapper .person::before
+{
+    content:" ";
+    position:absolute;
+    bottom:0;
+    left:0;
+    background: rgba(130,130,130,0);
+    background: -moz-linear-gradient(top, rgba(130,130,130,0) 0%, rgba(59,59,59,0) 55%, rgba(0,0,0,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(130,130,130,0)), color-stop(55%, rgba(59,59,59,0)), color-stop(100%, rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(top, rgba(130,130,130,0) 0%, rgba(59,59,59,0) 55%, rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(top, rgba(130,130,130,0) 0%, rgba(59,59,59,0) 55%, rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(top, rgba(130,130,130,0) 0%, rgba(59,59,59,0) 55%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(130,130,130,0) 0%, rgba(59,59,59,0) 55%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#828282', endColorstr='#000000', GradientType=0 );
+    width:100%;
+    height:100%;
+    z-index:7;
+}
+
+
+#couples .person .text
+{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    text-align:center;
+    color:#FFFFFF;
+    z-index:8;
+    padding:10px;
+}
+
+.person.groom{
+    float:left;
+    margin-left:10px;
+}
+.person.bride{
+   float:right;
+   margin-right:10px;
+}
+
+
+/* ===== 5. COUNTDOWN ===== */
+.countdown-wrapper {
+	text-align:center;  
+	padding-top:3em;
+}
+.countdown-wrapper li {
+	display: inline-block;
+	position: relative;
+	padding: 0px 20px;
+	color: #d8585f;
+	font-size: 34px;
+}
+
+.countdown-wrapper #countdown ul
+{
+	padding-left:0px;
+    margin-bottom:0px;
+}
+
+
+.countdown-wrapper li span {
+	display: block;
+	font-size: 14px;
+	color: #9f9f9f;
+}
+
+/* ===== 6. LOVE STORY ===== */
+#story.section{
+    padding-bottom:0px;
+}
+#story.section ol, #story.section ul{
+    list-style:none;
+    margin-left:0;
+    padding-left:0;
+}
+
+#story.section .story-text{
+    display:table;
+    width:100%;
+}
+
+#story.section .story-text > div{
+  display:table-cell;
+  width:50%;
+vertical-align: middle;
+}
+
+#story.section .story-text p{
+    line-height:1.7em;
+    margin-top:10px;
+}
+
+/* ===== 7. GALLERY ===== */
+
+#gallery .heading h1{
+    /*padding-top:.5em;*/
+    margin-top:20px;
+    margin-bottom:0px;    
+}
+
+.gallery-wrapper{
+    padding:25px 0;
+}
+.gallery-grid-item > div{
+    position:relative;  
+}
+.gallery-grid-item{
+    padding:5px;
+    overflow:hidden;
+    position:relative;
+}
+.gallery-grid-item img{
+    max-width:100%;
+    display:block;
+}   
+
+.gallery-grid-item .overlay{
+    position:absolute;
+    background-color:rgba(0,0,0,0.7);
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:4;
+    opacity:0;
+    padding:10px;
+    transition:ease-in-out .3s opacity;
+    -webkit-transition:ease-in-out .3s opacity;
+}
+
+
+.gallery-grid-item .overlay a{
+    display:block;
+    position:absolute;
+    z-index:5;
+    width:50px;
+    height:50px;
+    font-size:24px;
+    line-height: 50px;
+    color:#FFFFFF;
+    text-align:center;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    border:1px solid #FFFFFF;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    top:40%;
+}
+.gallery-grid-item:hover .overlay{
+    opacity:1;
+}
+
+/* ===== 8. PARTY ===== */
+
+#party.section .heading{
+    color:#FFFFFF;
+}
+#party.section .heading h1{
+    color: #FFFFFF;
+    margin-top:0;
+}
+#party.section .party-wrapper{
+    padding-top:3em;
+    padding-bottom:5em;
+}
+#party.section .party-box-wrapper{
+    max-width:450px;
+    width:100%;
+    padding:10px;
+    margin:0 auto;
+    border:2px solid rgba(255,255,255,0.8);
+}
+#party.section .party-box{  
+    background-color:rgba(255,255,255,0.8);
+    padding:25px;
+    text-align: center; 
+}
+#party.section .party-box .party-title{
+    font-family: "Great Vibes", cursive;
+    color:#ea545d;  
+    font-size:2em;
+}
+
+/* ===== 9. RSVP ===== */
+#rsvp.section{
+    margin-top:-90px;
+    margin-bottom:-90px;
+}
+#rsvp.section #rsvp-wrapper{
+   padding:2em 0;
+}
+#rsvp.section #rsvp-wrapper .form-wrapper{
+    padding:2.4em 0;
+    overflow:hidden;
+}
+
+#rsvpform button{
+    margin-top:20px;
+}
+/* ===== 10 .FOOTER ==== */
+#footer{
+    padding-top:4.5em;
+     border-bottom:4px solid #ef575b;
+      position:absolute;
+     width:100%;
+}
+
+#footer .heading h1 > span{
+    display:block;
+    color:#FFFFFF;
+}
+
+#footer .heading h1 > span:last-child{
+    margin-left:1.5em;
+   
+}
+
+/* 11. MAP */
+.map-wrapper{
+    position:relative;
+     height:360px;
+}
+
+#mapTitle{
+    color:#c22b34;
+}
+
+.map-wrapper .loading{
+    position:absolute;
+    z-index:888;
+    width:50px;
+    height:50px;
+    padding:5px;
+    font-size:2em;
+    top:40%;
+    line-height:25px;
+    color:#c22b34;
+    left:0;
+    right:0;
+    margin-right:auto;
+    margin-left:auto;
+}
+.map-wrapper #map-canvas{
+    height:360px;
+    width:100% !important;
+    z-index:999;
+}
+
+
+/* 12. MEDIA QUERY */
+
+@media (min-width:768px)
+{
+    .navbar-header{
+        display:none !important;
+    }
+}
+@media (max-width:767px)
+{
+	.navmenu ul.nav li
+	{
+		display:block;
+	}
+    #countdown ul > li{
+         float:left;
+         width:49.999999%;
+    }
+
+     #story.section .story-text > div{
+         display:table-row;
+         text-align:center;
+     }
+
+     #story.section .story-text > div img{
+         margin:0 auto;
+     }
+
+	#modal-maps .modal-footer{
+        text-align: center !important;
+    }
+}   
+
+@media (max-width:639px)
+{
+    #couples .information .heading{
+        margin-bottom:20px;
+    }
+    #couples .information .heading > *{
+        display:block;
+        width:100%;
+        padding:10px;   
+        margin-top:0;
+        margin-bottom:0;
+    }
+#couples .information .heading > h1 span:last-child{
+    margin-left:0px;
+}
+    #couples .information .heading > h1 span{
+        margin-left:0px;
+    }
+     #couples .information .heading h1{
+         margin-bottom:10px;
+
+     }
+	 #couples .information .heading h3{
+        text-align:center;
+     }
+
+     #couples .person-wrapper > div{
+         display:block;
+         max-width:300px;
+         width:100%;
+         margin:0 auto;
+     }
+
+     #couples .person-wrapper .person{
+        max-width:300px;
+         height:300px;
+        margin:0 auto;
+     }
+     .person.groom, .person.bride{
+         float:none;
+       
+     }
+
+
+     /* Story */
+     #story.section .story-text > div{
+         display:table-row;
+     }
+
+     #story.section .story-text > div img{
+         margin:0 auto;
+     }
+
+     #party.section .party-box-wrapper{
+         margin-bottom:20px;
+     }
+
+    
+
+}

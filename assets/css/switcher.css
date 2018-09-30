@@ -1,0 +1,78 @@
+#switch-style
+{
+	position:fixed;
+	right:0;
+	bottom:15%;
+	z-index: 999;
+	transform:translate(220px, 0px);
+	transition:transform 0.3s ease-out;
+	-webkit-box-shadow: 2px 3px 3px 0px rgba(0,0,0,0.36);
+	-moz-box-shadow: 2px 3px 3px 0px rgba(0,0,0,0.36);
+	box-shadow: 2px 3px 3px 0px rgba(0,0,0,0.36);
+}
+
+#switch-style.active
+{
+		transform:translate(0px, 0px);
+}
+
+#switch-style > div
+{
+	width:220px;
+	padding:10px;
+	background-color:#F2f2f2;
+	position: relative;
+}
+
+#switch-style > div > ul > li 
+{
+	display:inline-block;
+}
+
+
+#switch-style  > div > a
+{
+	width:40px;
+	height:40px;
+	display:block;
+	line-height:40px;
+	text-align:center;
+	font-size:16px;
+	color:#FFFFFF;
+	background-color:#D8585F;
+	position:absolute;
+	left:-40px;
+	top:0;
+}
+.switch-item h5{
+	font-weight:600;
+}
+ul.layout{
+	text-align:left;
+	list-style:none;
+	padding-left:0;
+	margin-left:0;
+}
+ul.layout > li{
+	margin-bottom:5px;
+}
+ul.layout > li > a{
+	display:block;
+	background-color:#D8585F;
+	padding:5px;
+	border-radius:5px;
+	color:#FFFFFF;
+	text-align:center;
+}
+
+ul.layout > li > a:hover{
+	background-color:#c22b34;
+}
+
+.button-buy{
+color:#FFFFFF !important;
+}
+.button-buy:hover{
+ color:#FFFFFF !important;
+ background-color:#499549 !important;
+}
